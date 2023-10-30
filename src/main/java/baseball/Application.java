@@ -1,7 +1,10 @@
 package baseball;
 
+import baseball.domain.Judgement;
 import baseball.domain.NumberGenerator;
+import baseball.domain.Referee;
 
+import java.util.Arrays;
 import java.util.List;
 
 // 객체 지향 프로그래밍
@@ -14,5 +17,16 @@ public class Application {
         NumberGenerator generator = new NumberGenerator();
         List<Integer> numbers = generator.createRandomNumber();
         System.out.println(numbers);
+
+        Judgement judgement = new Judgement();
+        final int count = judgement.correctCount(Arrays.asList(2, 8, 9), Arrays.asList(1, 2, 3));
+        System.out.println(count);
+
+        final boolean place = judgement.hasPlace(Arrays.asList(7, 8, 9), 0, 7);
+        System.out.println(place);
+
+        Referee referee = new Referee();
+        String result = referee.compare(Arrays.asList(7, 8, 9), Arrays.asList(1, 2, 3));
+        System.out.println(result);
     }
 }
