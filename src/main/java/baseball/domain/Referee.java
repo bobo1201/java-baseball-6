@@ -22,6 +22,6 @@ public class Referee {
             return "아웃";
         }
         
-        return ball + " 볼 " + strike + " 스트라이크 ";
+        return ball + " 볼 " + strike + " 스트라이크";
     }
 }
